@@ -7,12 +7,16 @@ runs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.8'
+    - name: Get pushed commit count
+      if: github.event_name == 'push'
+      id: commit_count
+      run: echo "count=$(echo '${{ github.event.commits }}' | jq 'length')" >>$GITHUB_OUTPUT
+      shell: bash
     - name: Checkout to pushed commits
       if: github.event_name == 'push'
       uses: actions/checkout@v4
       with:
-        ref: ${{ github.sha }}
-        fetch-depth: ${{ github.event.commits | length }}
+        fetch-depth: ${{ steps.commit_count.outputs.count }}
     - name: Checkout to PR source branch
       if: github.event_name == 'pull_request'
       uses: actions/checkout@v4

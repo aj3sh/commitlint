@@ -1,0 +1,195 @@
+GITHUB_EVENT_NAME push
+GITHUB_SHA e644bbb217728342cc1cbd03ffe4f65e1c671b58
+GITHUB_REF refs/heads/github-actions
+GITHUB_WORKFLOW Test Action
+GITHUB_ACTION __self
+GITHUB_ACTOR aj3sh
+GITHUB_JOB commitlint
+GITHUB_RUN_ATTEMPT 1
+GITHUB_RUN_NUMBER 6
+GITHUB_RUN_ID 7518045349
+GITHUB_EVENT_NAME push
+GITHUB_EVENT_NAME push
+GITHUB_EVENT_PATH /home/runner/work/_temp/_github_workflow/event.json
+{
+  "after": "e644bbb217728342cc1cbd03ffe4f65e1c671b58",
+  "base_ref": null,
+  "before": "07de8412ab4bbb50e77ce4a8e7d3b8b5540c305e",
+  "commits": [
+    {
+      "author": {
+        "email": "aj3sshh@gmail.com",
+        "name": "Ajesh Sen Thapa",
+        "username": "aj3sh"
+      },
+      "committer": {
+        "email": "aj3sshh@gmail.com",
+        "name": "Ajesh Sen Thapa",
+        "username": "aj3sh"
+      },
+      "distinct": true,
+      "id": "e644bbb217728342cc1cbd03ffe4f65e1c671b58",
+      "message": "feat: support for github action",
+      "timestamp": "2024-01-14T14:18:08+05:45",
+      "tree_id": "f68226bc8d15647ba8076c5534aee6dd04a92750",
+      "url": "https://github.com/aj3sh/commitlint/commit/e644bbb217728342cc1cbd03ffe4f65e1c671b58"
+    }
+  ],
+  "compare": "https://github.com/aj3sh/commitlint/compare/07de8412ab4b...e644bbb21772",
+  "created": false,
+  "deleted": false,
+  "forced": true,
+  "head_commit": {
+    "author": {
+      "email": "aj3sshh@gmail.com",
+      "name": "Ajesh Sen Thapa",
+      "username": "aj3sh"
+    },
+    "committer": {
+      "email": "aj3sshh@gmail.com",
+      "name": "Ajesh Sen Thapa",
+      "username": "aj3sh"
+    },
+    "distinct": true,
+    "id": "e644bbb217728342cc1cbd03ffe4f65e1c671b58",
+    "message": "feat: support for github action",
+    "timestamp": "2024-01-14T14:18:08+05:45",
+    "tree_id": "f68226bc8d15647ba8076c5534aee6dd04a92750",
+    "url": "https://github.com/aj3sh/commitlint/commit/e644bbb217728342cc1cbd03ffe4f65e1c671b58"
+  },
+  "pusher": {
+    "email": "35629644+aj3sh@users.noreply.github.com",
+    "name": "aj3sh"
+  },
+  "ref": "refs/heads/github-actions",
+  "repository": {
+    "allow_forking": true,
+    "archive_url": "https://api.github.com/repos/aj3sh/commitlint/{archive_format}{/ref}",
+    "archived": false,
+    "assignees_url": "https://api.github.com/repos/aj3sh/commitlint/assignees{/user}",
+    "blobs_url": "https://api.github.com/repos/aj3sh/commitlint/git/blobs{/sha}",
+    "branches_url": "https://api.github.com/repos/aj3sh/commitlint/branches{/branch}",
+    "clone_url": "https://github.com/aj3sh/commitlint.git",
+    "collaborators_url": "https://api.github.com/repos/aj3sh/commitlint/collaborators{/collaborator}",
+    "comments_url": "https://api.github.com/repos/aj3sh/commitlint/comments{/number}",
+    "commits_url": "https://api.github.com/repos/aj3sh/commitlint/commits{/sha}",
+    "compare_url": "https://api.github.com/repos/aj3sh/commitlint/compare/{base}...{head}",
+    "contents_url": "https://api.github.com/repos/aj3sh/commitlint/contents/{+path}",
+    "contributors_url": "https://api.github.com/repos/aj3sh/commitlint/contributors",
+    "created_at": 1705053641,
+    "default_branch": "main",
+    "deployments_url": "https://api.github.com/repos/aj3sh/commitlint/deployments",
+    "description": "commitlint is is a pre-commit hook designed to lint your commit messages according to the Conventional Commits standard.",
+    "disabled": false,
+    "downloads_url": "https://api.github.com/repos/aj3sh/commitlint/downloads",
+    "events_url": "https://api.github.com/repos/aj3sh/commitlint/events",
+    "fork": true,
+    "forks": 0,
+    "forks_count": 0,
+    "forks_url": "https://api.github.com/repos/aj3sh/commitlint/forks",
+    "full_name": "aj3sh/commitlint",
+    "git_commits_url": "https://api.github.com/repos/aj3sh/commitlint/git/commits{/sha}",
+    "git_refs_url": "https://api.github.com/repos/aj3sh/commitlint/git/refs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/aj3sh/commitlint/git/tags{/sha}",
+    "git_url": "git://github.com/aj3sh/commitlint.git",
+    "has_discussions": false,
+    "has_downloads": true,
+    "has_issues": false,
+    "has_pages": false,
+    "has_projects": true,
+    "has_wiki": true,
+    "homepage": null,
+    "hooks_url": "https://api.github.com/repos/aj3sh/commitlint/hooks",
+    "html_url": "https://github.com/aj3sh/commitlint",
+    "id": 742362658,
+    "is_template": false,
+    "issue_comment_url": "https://api.github.com/repos/aj3sh/commitlint/issues/comments{/number}",
+    "issue_events_url": "https://api.github.com/repos/aj3sh/commitlint/issues/events{/number}",
+    "issues_url": "https://api.github.com/repos/aj3sh/commitlint/issues{/number}",
+    "keys_url": "https://api.github.com/repos/aj3sh/commitlint/keys{/key_id}",
+    "labels_url": "https://api.github.com/repos/aj3sh/commitlint/labels{/name}",
+    "language": null,
+    "languages_url": "https://api.github.com/repos/aj3sh/commitlint/languages",
+    "license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "node_id": "MDc6TGljZW5zZTk=",
+      "spdx_id": "GPL-3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0"
+    },
+    "master_branch": "main",
+    "merges_url": "https://api.github.com/repos/aj3sh/commitlint/merges",
+    "milestones_url": "https://api.github.com/repos/aj3sh/commitlint/milestones{/number}",
+    "mirror_url": null,
+    "name": "commitlint",
+    "node_id": "R_kgDOLD-OIg",
+    "notifications_url": "https://api.github.com/repos/aj3sh/commitlint/notifications{?since,all,participating}",
+    "open_issues": 0,
+    "open_issues_count": 0,
+    "owner": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/35629644?v=4",
+      "email": "35629644+aj3sh@users.noreply.github.com",
+      "events_url": "https://api.github.com/users/aj3sh/events{/privacy}",
+      "followers_url": "https://api.github.com/users/aj3sh/followers",
+      "following_url": "https://api.github.com/users/aj3sh/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aj3sh/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.com/aj3sh",
+      "id": 35629644,
+      "login": "aj3sh",
+      "name": "aj3sh",
+      "node_id": "MDQ6VXNlcjM1NjI5NjQ0",
+      "organizations_url": "https://api.github.com/users/aj3sh/orgs",
+      "received_events_url": "https://api.github.com/users/aj3sh/received_events",
+      "repos_url": "https://api.github.com/users/aj3sh/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/aj3sh/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aj3sh/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/aj3sh"
+    },
+    "private": false,
+    "pulls_url": "https://api.github.com/repos/aj3sh/commitlint/pulls{/number}",
+    "pushed_at": 1705221209,
+    "releases_url": "https://api.github.com/repos/aj3sh/commitlint/releases{/id}",
+    "size": 31,
+    "ssh_url": "git@github.com:aj3sh/commitlint.git",
+    "stargazers": 0,
+    "stargazers_count": 0,
+    "stargazers_url": "https://api.github.com/repos/aj3sh/commitlint/stargazers",
+    "statuses_url": "https://api.github.com/repos/aj3sh/commitlint/statuses/{sha}",
+    "subscribers_url": "https://api.github.com/repos/aj3sh/commitlint/subscribers",
+    "subscription_url": "https://api.github.com/repos/aj3sh/commitlint/subscription",
+    "svn_url": "https://github.com/aj3sh/commitlint",
+    "tags_url": "https://api.github.com/repos/aj3sh/commitlint/tags",
+    "teams_url": "https://api.github.com/repos/aj3sh/commitlint/teams",
+    "topics": [],
+    "trees_url": "https://api.github.com/repos/aj3sh/commitlint/git/trees{/sha}",
+    "updated_at": "2024-01-14T08:30:57Z",
+    "url": "https://github.com/aj3sh/commitlint",
+    "visibility": "public",
+    "watchers": 0,
+    "watchers_count": 0,
+    "web_commit_signoff_required": false
+  },
+  "sender": {
+    "avatar_url": "https://avatars.githubusercontent.com/u/35629644?v=4",
+    "events_url": "https://api.github.com/users/aj3sh/events{/privacy}",
+    "followers_url": "https://api.github.com/users/aj3sh/followers",
+    "following_url": "https://api.github.com/users/aj3sh/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aj3sh/gists{/gist_id}",
+    "gravatar_id": "",
+    "html_url": "https://github.com/aj3sh",
+    "id": 35629644,
+    "login": "aj3sh",
+    "node_id": "MDQ6VXNlcjM1NjI5NjQ0",
+    "organizations_url": "https://api.github.com/users/aj3sh/orgs",
+    "received_events_url": "https://api.github.com/users/aj3sh/received_events",
+    "repos_url": "https://api.github.com/users/aj3sh/repos",
+    "site_admin": false,
+    "starred_url": "https://api.github.com/users/aj3sh/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aj3sh/subscriptions",
+    "type": "User",
+    "url": "https://api.github.com/users/aj3sh"
+  }
+}

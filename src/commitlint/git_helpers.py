@@ -61,9 +61,12 @@ def get_commit_messages_of_hash_range(
         GitInvalidCommitRangeException: If the commit range of from_hash..to_hash is not
             found or if there is an error retrieving the commit message.
     """
+    print(f"received hash range {from_hash} {to_hash}")
     # as the commit range doesn't support initial commit hash,
     # commit message of `from_hash` is taken separately
     from_commit_message = get_commit_message_of_hash(from_hash)
+    print("from_commit_message")
+    print(from_commit_message)
 
     try:
         # Runs the below git command:
@@ -71,12 +74,13 @@ def get_commit_messages_of_hash_range(
         # This outputs the commit messages excluding of FROM_HASH
         delimiter = "========commit-delimiter========"
         hash_range = f"{from_hash}..{to_hash}"
-
+        print(f"running git log for hash range {hash_range}")
         commit_messages_output = subprocess.check_output(
             ["git", "log", f"--format=%B{delimiter}", "--reverse", hash_range],
             text=True,
             stderr=subprocess.PIPE,
         )
+        print(commit_messages_output)
         commit_messages = commit_messages_output.split(f"{delimiter}\n")
         return [from_commit_message] + [
             commit_message.strip()

@@ -23,6 +23,10 @@ def _handle_pr_event(event: GithubEvent) -> None:
         EnvironmentError: If the base SHA and head SHA cannot be retrieved from
             the event payload.
     """
+    print("git branch")
+    print(subprocess.check_output(["git", "branch"], text=True))
+    print("git log --oneline")
+    print(subprocess.check_output(["git", "log", "--oneline"], text=True))
     try:
         to_commit = event.payload["pull_request"]["head"]["sha"]
 

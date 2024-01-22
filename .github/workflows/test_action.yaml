@@ -1,0 +1,20 @@
+name: Test Action
+
+on:
+  push:
+    branches: ['main', 'github-actions', 'temp']
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    name: Check commit messages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run commitlint
+        uses: ./ # Uses an action in the root directory
+        # or use a released GitHub Action
+        # uses: opensource-nepal/commitlint@0.2.0

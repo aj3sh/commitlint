@@ -1,0 +1,19 @@
+name: 'commitlint'
+description: 'A GitHub Action to check conventional commit message'
+runs:
+  using: 'composite'
+  steps:
+    - name: Install Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+    - name: Checkout PR source branch
+      if: github.event_name == 'pull_request'
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+        fetch-depth: ${{ github.event.pull_request.commits }}
+    - name: Check the commits
+      id: commitlint
+      run: python src/github_actions/run.py
+      shell: bash

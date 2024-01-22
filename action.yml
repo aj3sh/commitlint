@@ -20,6 +20,7 @@ runs:
       if: github.event_name == 'push'
       uses: actions/checkout@v4
       with:
+        ref: ${{ github.sha }}
         fetch-depth: ${{ steps.push_commit_count.outputs.count }}
 
     # for pull_request event

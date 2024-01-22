@@ -27,7 +27,7 @@ runs:
       if: github.event_name == 'pull_request'
       uses: actions/checkout@v4
       with:
-        # ref: ${{ github.event.pull_request.head.sha }}
+        ref: ${{ github.event.pull_request.head.sha }}
         fetch-depth: ${{ github.event.pull_request.commits }}
 
     # checking the commits

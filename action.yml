@@ -7,6 +7,12 @@ runs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.8'
+    - name: Checkout code for pushed commits
+      if: github.event_name == 'push'
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.before }}..${{ github.sha }}
+        fetch-depth: 1
     - name: Checkout PR source branch
       if: github.event_name == 'pull_request'
       uses: actions/checkout@v4

@@ -22,11 +22,11 @@ jobs:
           changelog-types: >
             [
               {"type":"fix","section":"Bug Fixes"},
-              {"type":"feat","section":"Features"}
+              {"type":"feat","section":"New Features"}
             ]
           extra-files: >
             [
-              "src/commitlint/__version__.py"
+              src/commitlint/__version__.py
             ]
 
       - uses: actions/checkout@v3

@@ -1,0 +1,18 @@
+{
+  "changelog-types": [
+    {
+      "section": "Bug Fixes",
+      "type": "fix"
+    },
+    {
+      "section": "Features",
+      "type": "feat"
+    }
+  ],
+  "extra-files": [
+    "src/commitlint/__version__.py"
+  ],
+  "pull-request-header": "Release PR",
+  "pull-request-title-pattern": "chore: release v${version}",
+  "release-type": "python"
+}

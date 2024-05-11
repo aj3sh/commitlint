@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.3.0](https://github.com/aj3sh/commitlint/compare/v1.2.1...v1.3.0) (2024-05-11)
+
+
+### Features
+
+* removed trusted publisher ([9e8635e](https://github.com/aj3sh/commitlint/commit/9e8635e6a2c6a5c8979e47c6adb0661fabd60f66))
+
 ## [1.2.1](https://github.com/aj3sh/commitlint/compare/v1.2.0...v1.2.1) (2024-05-11)
 
 

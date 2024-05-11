@@ -6,14 +6,18 @@
       "type": "fix"
     },
     {
-      "section": "Features",
+      "section": "New Features",
       "type": "feat"
     }
   ],
-  "extra-files": [
-    "src/commitlint/__version__.py"
-  ],
+  "packages": {
+    ".": {
+      "extra-files": [
+        "src/commitlint/__version__.py"
+      ]
+    }
+  },
   "pull-request-header": "Release PR",
   "pull-request-title-pattern": "chore: release v${version}",
-  "release-type": "python"
+  "release-type": "simple"
 }

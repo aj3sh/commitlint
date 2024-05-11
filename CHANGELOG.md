@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.2.1](https://github.com/aj3sh/commitlint/compare/v1.2.0...v1.2.1) (2024-05-11)
+
+
+### Bug Fixes
+
+* update license version ([30668a7](https://github.com/aj3sh/commitlint/commit/30668a7a2450596dd655ba3793652ad0eee00892))
+
 ## [1.2.0](https://github.com/aj3sh/commitlint/compare/v1.1.0...v1.2.0) (2024-05-11)
 
 

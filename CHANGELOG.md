@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.3.1](https://github.com/aj3sh/commitlint/compare/v1.3.0...v1.3.1) (2024-05-11)
+
+
+### Bug Fixes
+
+* fixed oidc token ([040769e](https://github.com/aj3sh/commitlint/commit/040769e7e64c7aa6b1b295e49f928d0c55162b3d))
+
 ## [1.3.0](https://github.com/aj3sh/commitlint/compare/v1.2.1...v1.3.0) (2024-05-11)
 
 

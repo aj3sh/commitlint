@@ -8,6 +8,7 @@ import re
 from abc import ABC, abstractmethod
 from typing import List, Tuple, Type, Union
 
+from .. import output
 from ..constants import COMMIT_HEADER_MAX_LENGTH, COMMIT_TYPES
 from ..messages import (
     COMMIT_TYPE_INVALID_ERROR,
@@ -306,11 +307,13 @@ def run_validators(
     success = True
     errors: List[str] = []
 
-    # checking the length of header
     for validator_class in validator_classes:
+        output.verbose(f"running validator {validator_class.__name__}")
         validator = validator_class(commit_message)
         if not validator.is_valid():
+            output.verbose("validation failed")
             if fail_fast:
+                output.verbose(f"fail_fast: {fail_fast}, skipping further validations")
                 # returning immediately if any error occurs.
                 return False, validator.errors()
 

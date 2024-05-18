@@ -311,7 +311,7 @@ def run_validators(
         output.verbose(f"running validator {validator_class.__name__}")
         validator = validator_class(commit_message)
         if not validator.is_valid():
-            output.verbose("validation failed")
+            output.verbose(f"{validator_class.__name__}: validation failed")
             if fail_fast:
                 output.verbose(f"fail_fast: {fail_fast}, skipping further validations")
                 # returning immediately if any error occurs.

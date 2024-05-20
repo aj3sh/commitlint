@@ -40,18 +40,20 @@ For more details, please refer to the Conventional Commits specification at http
 ### For pre-commit
 
 1. Add the following configuration on `.pre-commit-config.yaml`.
-
+  <!-- x-release-please-start-version -->
    ```yaml
    repos:
    ...
 
    - repo: https://github.com/opensource-nepal/commitlint
        rev: v0.2.1
+
        hooks:
        - id: commitlint
 
    ...
    ```
+   <!-- x-release-please-end -->
 
 2. Install the `commit-msg` hook in your project repo:
 

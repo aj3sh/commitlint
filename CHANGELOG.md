@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.0.1](https://github.com/aj3sh/commitlint/compare/v1.0.0...v1.0.1) (2024-07-21)
+
+
+### Bug Fixes
+
+* typo fix ([4b329a9](https://github.com/aj3sh/commitlint/commit/4b329a9ee60367f8d58d80053d32c1a4e4d9e10f))
+
 ## [1.0.0](https://github.com/aj3sh/commitlint/compare/v1.1.0...v1.0.0) (2024-07-21)
 
 

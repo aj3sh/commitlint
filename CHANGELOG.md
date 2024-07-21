@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.1.0](https://github.com/aj3sh/commitlint/compare/v1.0.1...v1.1.0) (2024-07-21)
+
+
+### Features
+
+* v1.1 feature ([6cf5f10](https://github.com/aj3sh/commitlint/commit/6cf5f10a03e1f98c9d31f15cb7f40447450017ff))
+
 ## [1.0.1](https://github.com/aj3sh/commitlint/compare/v1.0.0...v1.0.1) (2024-07-21)
 
 

@@ -1,5 +1,5 @@
 """
-This module defines the `GithubEvent` class for handling GitHub event details.
+This module defines the `GitHubEvent` class for handling GitHub event details.
 
 Note:
     This module relies on the presence of specific environment variables
@@ -12,7 +12,7 @@ from typing import Any, Dict
 
 
 # pylint: disable=R0902; Too many instance attributes
-class GithubEvent:
+class GitHubEvent:
     """Class representing GitHub events.
 
     This class provides methods for loading and accessing various details of
@@ -24,6 +24,7 @@ class GithubEvent:
         ref (str): The Git reference (branch or tag) for the event.
         workflow (str): The name of the GitHub workflow.
         action (str): The action that triggered the event.
+        repository (str): The GitHub repository name.
         actor (str): The GitHub username of the user or app that triggered the event.
         job (str): The name of the job associated with the event.
         run_attempt (str): The current attempt number for the job run.
@@ -39,7 +40,7 @@ class GithubEvent:
 
     Example:
         ```python
-        github_event = GithubEvent()
+        github_event = GitHubEvent()
         print(github_event.event_name)
         print(github_event.sha)
         print(github_event.payload)
@@ -47,7 +48,7 @@ class GithubEvent:
     """
 
     def __init__(self) -> None:
-        """Initialize a new instance of the GithubEvent class."""
+        """Initialize a new instance of the GitHubEvent class."""
         self.__load_details()
 
     def __load_details(self) -> None:
@@ -64,6 +65,7 @@ class GithubEvent:
         self.workflow = os.environ.get("GITHUB_WORKFLOW")
         self.action = os.environ.get("GITHUB_ACTION")
         self.actor = os.environ.get("GITHUB_ACTOR")
+        self.repository = os.environ.get("GITHUB_REPOSITORY")
         self.job = os.environ.get("GITHUB_JOB")
         self.run_attempt = os.environ.get("GITHUB_RUN_ATTEMPT")
         self.run_number = os.environ.get("GITHUB_RUN_NUMBER")
@@ -78,10 +80,10 @@ class GithubEvent:
 
     def to_dict(self) -> Dict[str, Any]:
         """
-        Convert the GithubEvent instance to a dictionary.
+        Convert the GitHubEvent instance to a dictionary.
 
         Returns:
-            dict: A dictionary containing the attributes of the GithubEvent instance.
+            dict: A dictionary containing the attributes of the GitHubEvent instance.
         """
         return {
             attr: getattr(self, attr)

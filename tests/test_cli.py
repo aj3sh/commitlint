@@ -25,7 +25,6 @@ class TestCLIGetArgs:
             file=None,
             hash=None,
             from_hash=None,
-            quiet=None,
         ),
     )
     def test__get_args__with_commit_message(self, *_):
@@ -34,7 +33,6 @@ class TestCLIGetArgs:
         assert args.file is None
         assert args.hash is None
         assert args.from_hash is None
-        assert args.quiet is None
 
     @patch(
         "argparse.ArgumentParser.parse_args",
@@ -100,6 +98,7 @@ class TestCLIMain:
             skip_detail=False,
             quiet=False,
             verbose=False,
+            hide_input=False,
         ),
     )
     def test__main__valid_commit_message(
@@ -118,6 +117,7 @@ class TestCLIMain:
             skip_detail=True,
             quiet=False,
             verbose=False,
+            hide_input=False,
         ),
     )
     def test__main__valid_commit_message_using_skip_detail(
@@ -136,6 +136,7 @@ class TestCLIMain:
             skip_detail=False,
             quiet=False,
             verbose=False,
+            hide_input=False,
         ),
     )
     def test__main__invalid_commit_message(
@@ -161,6 +162,7 @@ class TestCLIMain:
             skip_detail=True,
             quiet=False,
             verbose=False,
+            hide_input=False,
         ),
     )
     def test__main__invalid_commit_message_using_skip_detail(
@@ -173,6 +175,31 @@ class TestCLIMain:
             [
                 call("⧗ Input:\nInvalid commit message\n"),
                 call(f"{VALIDATION_FAILED}"),
+            ]
+        )
+
+    @patch(
+        "commitlint.cli.get_args",
+        return_value=MagicMock(
+            commit_message="Invalid commit message",
+            file=None,
+            hash=None,
+            from_hash=None,
+            skip_detail=False,
+            quiet=False,
+            verbose=False,
+            hide_input=True,
+        ),
+    )
+    def test__main__invalid_commit_message_with_hide_input_True(
+        self, _mock_get_args, mock_output_error, _mock_output_success
+    ):
+        with pytest.raises(SystemExit):
+            main()
+        mock_output_error.assert_has_calls(
+            [
+                call("✖ Found 1 error(s)."),
+                call(f"- {INCORRECT_FORMAT_ERROR}"),
             ]
         )
 
@@ -191,7 +218,9 @@ class TestCLIMain:
 
     @patch(
         "commitlint.cli.get_args",
-        return_value=MagicMock(file="path/to/file.txt", skip_detail=False, quiet=False),
+        return_value=MagicMock(
+            file="path/to/file.txt", skip_detail=False, quiet=False, hide_input=False
+        ),
     )
     @patch("builtins.open", mock_open(read_data="Invalid commit message 2"))
     def test__main__invalid_commit_message_with_file(
@@ -231,7 +260,11 @@ class TestCLIMain:
     @patch(
         "commitlint.cli.get_args",
         return_value=MagicMock(
-            file=None, hash="commit_hash", skip_detail=False, quiet=False
+            file=None,
+            hash="commit_hash",
+            skip_detail=False,
+            quiet=False,
+            hide_input=False,
         ),
     )
     @patch("commitlint.cli.get_commit_message_of_hash")
@@ -267,6 +300,7 @@ class TestCLIMain:
             skip_detail=False,
             quiet=False,
             verbose=False,
+            hide_input=False,
         ),
     )
     @patch("commitlint.cli.get_commit_messages_of_hash_range")
@@ -294,6 +328,7 @@ class TestCLIMain:
             skip_detail=False,
             quiet=False,
             verbose=False,
+            hide_input=False,
         ),
     )
     @patch("commitlint.cli.get_commit_messages_of_hash_range")
@@ -349,6 +384,7 @@ class TestCLIMain:
             skip_detail=False,
             quiet=True,
             verbose=False,
+            hide_input=False,
         ),
     )
     def test__main__sets_config_for_quiet(
@@ -413,6 +449,7 @@ class TestCLIMainQuiet:
             skip_detail=False,
             quiet=True,
             verbose=False,
+            hide_input=False,
         ),
     )
     @patch("sys.stdout.write")
@@ -436,6 +473,7 @@ class TestCLIMainQuiet:
             skip_detail=False,
             quiet=True,
             verbose=False,
+            hide_input=False,
         ),
     )
     @patch("sys.stdout.write")
@@ -457,6 +495,7 @@ class TestCLIMainQuiet:
             skip_detail=False,
             quiet=True,
             verbose=False,
+            hide_input=False,
         ),
     )
     @patch("commitlint.cli.get_commit_messages_of_hash_range")
@@ -481,6 +520,7 @@ class TestCLIMainQuiet:
             skip_detail=False,
             quiet=True,
             verbose=False,
+            hide_input=False,
         ),
     )
     @patch("commitlint.cli.get_commit_messages_of_hash_range")

@@ -1,5 +1,9 @@
 # type: ignore
 # pylint: disable=all
+"""
+Integration test of `run.py` to ensure Github Action full functionality.
+"""
+
 import json
 import os
 import subprocess
@@ -36,9 +40,6 @@ def set_github_env_vars():
 @pytest.fixture(autouse=True)
 def setup_env():
     set_github_env_vars()
-
-
-# integration test of run_action to ensure Github Action full functionality.
 
 
 @patch("subprocess.check_output", return_value="success")

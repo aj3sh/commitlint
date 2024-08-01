@@ -5,25 +5,13 @@ import os
 import json
 import pytest
 from unittest.mock import patch, mock_open
+
 from github_actions.action.event import GitHubEvent
+
+from tests.fixtures.actions_env import set_github_env_vars
 
 
 MOCK_PAYLOAD = {"key": "value"}
-
-
-def set_github_env_vars():
-    os.environ["GITHUB_EVENT_NAME"] = "push"
-    os.environ["GITHUB_SHA"] = "commitlint_sha"
-    os.environ["GITHUB_REF"] = "refs/heads/main"
-    os.environ["GITHUB_WORKFLOW"] = "commitlint_ci"
-    os.environ["GITHUB_ACTION"] = "action"
-    os.environ["GITHUB_ACTOR"] = "actor"
-    os.environ["GITHUB_REPOSITORY"] = "opensource-nepal/commitlint"
-    os.environ["GITHUB_JOB"] = "job"
-    os.environ["GITHUB_RUN_ATTEMPT"] = "9"
-    os.environ["GITHUB_RUN_NUMBER"] = "8"
-    os.environ["GITHUB_RUN_ID"] = "7"
-    os.environ["GITHUB_EVENT_PATH"] = "/tmp/github_event.json"
 
 
 @pytest.fixture(scope="module")

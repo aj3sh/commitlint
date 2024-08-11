@@ -34,10 +34,10 @@ jobs:
           git push origin :v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
 
           # creating new tags
-          git tag -a v${{ steps.release.outputs.major }}
-          git tag -a v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}
-          git push origin v${{ steps.release.outputs.major }}
-          git push origin v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}
+          git tag v${{ steps.release.outputs.major }}
+          git tag v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}
+          git push origin v${{ steps.release.outputs.major }} -f
+          git push origin v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} -f
 
       - name: Set up Python
         uses: actions/setup-python@v5

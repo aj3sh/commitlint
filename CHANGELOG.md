@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.1.0](https://github.com/aj3sh/commitlint/compare/v1.0.0...v1.1.0) (2024-08-11)
+
+
+### Features
+
+* added ci version ([652ff74](https://github.com/aj3sh/commitlint/commit/652ff743456c05b393ac7bc7415b560a8b1c58a9))
+
 ## [1.0.0](https://github.com/aj3sh/commitlint/compare/v1.2.0...v1.0.0) (2024-08-08)
 
 

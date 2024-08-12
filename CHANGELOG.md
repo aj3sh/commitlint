@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.1.0](https://github.com/aj3sh/commitlint/compare/v1.0.0...v1.1.0) (2024-08-12)
+
+
+### Features
+
+* hello ([25b6334](https://github.com/aj3sh/commitlint/commit/25b6334fb03e56fcb560207a6ca98fd672db7fcc))
+
 ## [1.0.0](https://github.com/aj3sh/commitlint/compare/v1.0.0...v1.0.0) (2024-08-12)
 
 
